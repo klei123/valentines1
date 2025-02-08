@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine</title>
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .hearts {
+            font-size: 3em;
+            color: red;
+        }
+        .message {
+            font-size: 2.5em;
+            color: darkred;
+            margin: 20px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .button {
+            background-color: #ff007f;
+            color: white;
+            font-size: 1.5em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .button:hover {
+            background-color: #ff66b2;
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts">❤️❤️❤️</div>
+    <div class="message" id="valentineMessage"></div>
+    <div class="hearts">❤️❤️❤️</div>
+
+    <div class="buttons">
+        <button class="button" onclick="kaloniNeFaqenTjeter()">Yes</button>
+        <button class="button" onclick="kaloniNeFaqenTjeter()">Yes</button>
+    </div>
+
+    <script>
+        // Merr emrin nga URL (nëse është dhënë) dhe zëvendëso '[emer]'
+        const urlParams = new URLSearchParams(window.location.search);
+        const emer = urlParams.get('emer') || 'My beloved';  // Nëse nuk ka emër të dhënë, përdor 'My beloved'
+        
+        const messageElement = document.getElementById('valentineMessage');
+        messageElement.innerHTML = `Will you, my beloved <span style="font-weight: bold;">${emer}</span>, be my Valentine?`;
+
+        // Funksioni për të kaluar në faqen tjetër
+        function kaloniNeFaqenTjeter() {
+            window.location.href = "final_page.html";  // Çon përdoruesin në final_page.html
+        }
+    </script>
+</body>
+</html>

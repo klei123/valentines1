@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyetja: A je Klei?</title>
+    <script>
+        function pyetja() {
+            var pergjigje = prompt("A je Ejsi Kristo? (po/jo)");
+            if (pergjigje.toLowerCase() === "po") {
+                window.location.href = "valentines_page.html";  // Kalo në faqe tjetër
+            } else {
+                alert("Ik pra, ç'do këtu!");  // Shfaq mesazh
+            }
+        }
+    </script>
+</head>
+<body onload="pyetja()">
+    <h1>Mirësevini!</h1>
+    
+</body>
+</html> 
